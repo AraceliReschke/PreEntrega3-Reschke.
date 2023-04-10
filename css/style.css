@@ -1,42 +1,42 @@
-body {
+body{
   background-color: rgb(0, 0, 0);
 }
-
-* {
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*{
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
-
-@font-face {
-  font-family: "Melorist";
+@font-face{
+  font-family:"Melorist" ;
   src: url(../fuentes/Melorist.ttf);
 }
-a {
+a{
   color: #fffefe;
 }
 a:hover {
   background-color: #ffffff;
   color: #000000;
 }
-
-nav {
+nav{
   background: #030303;
   height: 80px;
   width: 100%;
 }
-nav ul {
+nav ul{
   float: right;
   margin-right: 20px;
 }
-nav ul li {
+nav ul li{
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a {
+nav ul li a{
   color: #fffefe;
   font-size: 18px;
   padding: 7px 13px;
@@ -44,11 +44,11 @@ nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-nav ul li a:hover {
+li a.nav-item, li a:hover{
   background: #f9f8f8;
-  transition: 0.5s;
+  transition: .5s; 
 }
-nav .menu {
+.menu{
   font-size: 30px;
   color: #f9f5f5;
   float: right;
@@ -57,122 +57,270 @@ nav .menu {
   cursor: pointer;
   display: none;
 }
-nav #check {
+#check{
   display: none;
 }
-nav h1 {
+h1{
   color: white;
   font-size: 50px;
-  font-family: "Melorist";
+  font-family:"Melorist";
   align-items: flex-start;
-  padding-left: 30px;
+  padding-left:30px ;
   padding-top: 20px;
 }
-nav h2 {
+h2{
   color: white;
-  font-size: 30px;
-  font-family: Louis George Cafe Light;
+  font-size: 20px;
+  font-family:Louis George Cafe Light;
   padding-left: 100px;
 }
-
-img.custom {
+img.custom{
   height: 600px;
   width: 600px;
-  object-fit: scale-down;
-}
+  object-fit: scale-down; 
+  
+} 
 
 aside ul li {
   display: flex;
-  display: inline-block;
-  margin-right: 20px;
-  padding-top: 10px;
-}
+  display: inline-block; 
+  margin-right: 20px; 
+  padding-top: 10px;  
 
-.info-redes {
+}
+.info-redes{
   list-style: none;
-  font-size: 30px;
+  font-size: 30px;    
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-
-.derechos {
+.derechos{
   display: flex;
-  justify-content: center;
+  justify-content: center;    
   padding-top: 10px;
   color: white;
 }
-
-.sobre-mi {
+/*sobre mi*/
+.sobre-mi{
   display: flex;
-  justify-content: center;
-  padding-top: 200px;
-  padding-left: 200px;
+  justify-content:center;    
+  padding-top: 30px;
+  padding-left: 200px;    
 }
-.sobre-mi .content-info {
+.content-info {
   background-color: rgb(0, 0, 0);
-  font-family: Louis George Cafe;
-  color: white;
+  font-family:Louis George Cafe; ;
+  color:white;
   width: 1000px;
-  height: 700px;
+  height: 700px;    
   padding: 20px;
   border: 0px solid;
   position: sticky;
-  text-align: justify h3;
-  text-align-font-size: 40px;
-  text-align-display: flex;
-  text-align-justify-content: center;
-  text-align-padding: 20px;
-}
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(7, 200px);
-  grid-template-rows: 120px repeat(2, 120px);
-  grid-gap: 30px;
-  padding-top: 150px;
-  padding-left: 150px;
-}
-.gallery-container img {
-  border-radius: 5px;
-}
-
-.flex-container {
+  text-align: justify
+} 
+.content-info h3 {
+  font-size: 40px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 100px 100px;
+  padding: 20px;
 }
-.flex-container .form {
+/*galeria*/
+.gallery-container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) ;
+  grid-gap: 30px;
+  padding:200;
+  margin: 0;
+}
+.gallery-container img{
+  border-radius: 5px;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+/*contactos*/
+.form{
   background-color: rgb(0, 0, 0);
   margin: auto;
-  padding: 150px;
+  padding: 150px  ;
   min-height: 400px;
   text-align: center;
 }
-.flex-container .form .form-parrafo {
+.form-parrafo {
   font-size: 20px;
   text-align: center;
   color: white;
-  padding-left: 50px;
+  padding-left: 50px
 }
-.flex-container .form .form-input {
+.flex-container{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 100px 100px;
+} 
+.form-input{
   width: 150%;
   padding: 7px;
   margin: 6px;
   border-radius: 5px;
-  border-bottom: 3px solid rgb(96, 123, 245);
+  border-bottom: 3px solid rgb(96, 123, 245) ;
 }
-.flex-container .form .form-input .form textarea {
+.form textarea{
   min-height: 200px;
   resize: none;
 }
-.flex-container .form .form-input .form-boton {
+.form-boton{
   padding: 10px;
   padding-left: 40px;
   width: 100%;
-}
 
-/*# sourceMappingURL=style.css.map */
+
+}
+@media screen and (max-width: 360px){
+  .menu{
+      display: block; 
+      z-index: 1000;      
+  }        
+  ul{
+      position:fixed;        
+      width: 100%;        
+      height: 100vh;
+      background: #000000;
+      top: 60px;
+      left: -100%;             
+      text-align:center;
+      transition: all .5s;
+      z-index: 1;
+      
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 40px;
+  } 
+  nav ul li a{
+      font-size: 20px;
+  }  
+  
+  li a.nav-item, li a:hover{
+      background: none;
+      color: rgb(228, 244, 212);
+  } 
+  #check:checked ~ ul{
+      left:0;
+  }
+  h1 {
+      display: block;
+      font-size: 20px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin: 8px;
+  }
+  h2 {          
+      font-size: 15px;
+      padding-left: 50px;
+      
+  }
+  aside ul li a {
+     margin: 0.1;      
+            
+  }
+  .slider{
+      margin-top: 100px;
+      
+  }
+  img.custom{
+      height: 240px;
+      width: 240px;
+      object-fit: scale-down;       
+     
+  }   
+          
+
+  .footer-cotainer{
+      display: flex;
+      justify-content: center;
+      padding-top: 200px;
+      padding-bottom: 10px;
+  }
+  
+  .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+      padding-right: 200px;
+      padding-left: 100px;
+
+  } 
+  .gallery-container img {
+      grid-row-end:span 2 ;
+         
+  }
+  .sobre-mi{
+      display: flex;
+     justify-content:center; 
+     padding-top: 10px;
+     padding-left: 5px;
+     padding-right: 5px; 
+
+  }
+  .fijo{
+      position:sticky;
+      top: 0;
+      background-color: #060606;
+      padding: 12px;
+  }
+  .content-info {
+      background-color: rgb(5, 5, 5);
+      font-family:Louis George Cafe; ;
+      color:white;
+      width: 400px;
+      height: 600px; 
+      overflow: auto;
+      padding: 10px;
+      text-align:justify;
+      margin: auto;     
+  }
+  .content-info h3 {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      padding: 20px;           
+  }
+  
+  .form{
+      background-color: rgb(0, 0, 0);
+      padding: 0px ;
+      padding-right: 100px;       
+      text-align: center;  
+  }
+  .flex-container{
+      display: flex;
+      justify-content: center;       
+  }    
+  .form-parrafo{
+      font-size: 15px;
+      text-align: left;
+  }
+  .flex-container{
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin: 0px ; 
+      width: 100%;
+      height: 100%;
+      padding-top: 50px;        
+      padding-right: 30px;    
+  }  
+}
+@media screen and (max-width: 768px){
+  .menu{
+      padding-left: 20px;
+  }
+  nav ul li a{
+      font-size: 12px;
+  }
+}
