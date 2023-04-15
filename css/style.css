@@ -39,14 +39,13 @@ nav ul li{
 nav ul li a{
   color: #fffefe;
   font-size: 18px;
+  font-family: Louis George Cafe Light;
   padding: 7px 13px;
   border-radius: 3px;
-  text-transform: uppercase;
   text-decoration: none;
 }
 li a.nav-item, li a:hover{
-  background: #f9f8f8;
-  transition: .5s; 
+  background: #f9f8f8;  
 }
 .menu{
   font-size: 30px;
@@ -79,20 +78,20 @@ h2{
 img.custom{
   height: 600px;
   width: 600px;
-  object-fit: scale-down; 
-  
-} 
+  object-fit: scale-down;
+
+}
 
 aside ul li {
   display: flex;
-  display: inline-block; 
-  margin-right: 20px; 
-  padding-top: 10px;  
+  display: inline-block;
+  margin-right: 20px;
+  padding-top: 10px;
 
 }
 .info-redes{
   list-style: none;
-  font-size: 30px;    
+  font-size: 30px;
   display: flex;
   justify-content: center;
   padding: 0;
@@ -101,121 +100,130 @@ aside ul li {
 }
 .derechos{
   display: flex;
-  justify-content: center;    
+  justify-content: center;
   padding-top: 10px;
   color: white;
 }
 /*sobre mi*/
 .sobre-mi{
   display: flex;
-  justify-content:center;    
+  justify-content:center;
   padding-top: 30px;
-  padding-left: 200px;    
+  padding-left: 200px;
 }
 .content-info {
   background-color: rgb(0, 0, 0);
   font-family:Louis George Cafe; ;
   color:white;
   width: 1000px;
-  height: 700px;    
+  height: 700px;
   padding: 20px;
   border: 0px solid;
   position: sticky;
   text-align: justify
-} 
+}
 .content-info h3 {
+  font-family:"Melorist";
   font-size: 40px;
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 /*galeria*/
-.contenedor ul li {
-  max-width: 120rem;
-  margin:0 auto;
+#galeria .col-lg-4 {
+  margin: 0;
+  padding: 25px;
 }
-
-.gallery-container{
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr) ;
-  grid-gap: 20px;
-  
-}
-.gallery-container img{
-  border-radius: 5px;
+#galeria img{
+  width: 100%;
   height: 250px;
-  width: 250px;
-  padding:0; 
-  margin: 20px;;
-  object-fit: cover;
+}
+#galeria img:hover{
+  border: 5px solid #ffff;
 }
 /*contactos*/
-.form{
-  background-color: rgb(0, 0, 0);
-  margin: auto;  
+.formulario{
+  max-width: 600px;
+  margin:0 auto;  
+}
+.formulario fieldset{
+  font-family:Louis George Cafe Light;
+  border: 1px solid #ffffff;  
+  color: #ffffff;
+  padding-left: 5px ;
+  padding-right: 20px;
+}
+.formulario legend{
+  background-color: #171717;
+  font-family:Louis George Cafe Light;
   text-align: center;
-}
-.form-parrafo {
-  font-size: 20px;
-  text-align: center;
-  color: white;
-  padding-left: 50px
-}
-.flex-container{
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  margin: 100px 100px;
-} 
-.form-input{
-  width: 150%;
-  padding: 7px;
-  margin: 6px;
-  border-radius: 5px;
-  border-bottom: 3px solid rgb(96, 123, 245) ;
-}
-.form textarea{
-  min-height: 200px;
-  resize: none;
-}
-.form-boton{
-  padding: 10px;
-  padding-left: 40px;
   width: 100%;
-
-
+  color:#faf9f9;
+  font-weight: 900;
+  padding: 14px;
+  margin-bottom: 40px;
 }
+.campo{
+  display: flex;
+  margin-bottom: 32px;
+}
+.campo label{
+  flex-basis:100px ;
+}
+.campo input[type="tex"],
+.campo input[type="email"],
+textarea  {
+  flex: 1;
+  padding: 14px;
+  font-family:Louis George Cafe Light;
+}
+.btn{
+  background-color: #fff;  
+  color:#060606;
+  padding:10px;
+  margin-top: 4px;
+  font-weight: 900;
+  text-align: center;
+  transition: background-color .3s ease-out ;
+  border: #ffffff;
+}
+.btn:hover{
+  cursor: pointer;
+}
+
+
+
+
 @media screen and (max-width: 360px){
   .menu{
-      display: block; 
-      z-index: 1000;      
-  }        
+      display: block;
+      z-index: 1000;
+  }
   ul{
-      position:fixed;        
-      width: 100%;        
+      position:fixed;
+      width: 100%;
       height: 100vh;
       background: #000000;
       top: 60px;
-      left: -100%;             
+      left: -100%;
       text-align:center;
       transition: all .5s;
       z-index: 1;
-      
+
   }
   nav ul li{
       display: block;
       margin: 50px 0;
       line-height: 40px;
-  } 
+  }
   nav ul li a{
       font-size: 20px;
-  }  
-  
+  }
+
   li a.nav-item, li a:hover{
       background: none;
       color: rgb(228, 244, 212);
-  } 
+  }
   #check:checked ~ ul{
       left:0;
   }
@@ -226,26 +234,26 @@ aside ul li {
       padding-bottom: 0px;
       margin: 8px;
   }
-  h2 {          
+  h2 {
       font-size: 15px;
       padding-left: 50px;
-      
+
   }
   aside ul li a {
-     margin: 0.1;      
-            
+     margin: 0.1;
+
   }
   .slider{
       margin-top: 100px;
-      
+
   }
   img.custom{
       height: 240px;
       width: 240px;
-      object-fit: scale-down;       
-     
-  }   
-          
+      object-fit: scale-down;
+
+  }
+
 
   .footer-cotainer{
       display: flex;
@@ -253,25 +261,13 @@ aside ul li {
       padding-top: 200px;
       padding-bottom: 10px;
   }
-  
-  .gallery-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 20px;
-      padding-right: 200px;
-      padding-left: 100px;
 
-  } 
-  .gallery-container img {
-      grid-row-end:span 2 ;
-         
-  }
   .sobre-mi{
       display: flex;
-     justify-content:center; 
+     justify-content:center;
      padding-top: 10px;
      padding-left: 5px;
-     padding-right: 5px; 
+     padding-right: 5px;
 
   }
   .fijo{
@@ -285,43 +281,44 @@ aside ul li {
       font-family:Louis George Cafe; ;
       color:white;
       width: 400px;
-      height: 600px; 
+      height: 600px;
       overflow: auto;
       padding: 10px;
       text-align:justify;
-      margin: auto;     
+      margin: auto;
   }
   .content-info h3 {
+      font-family:"Melorist";
       font-size: 20px;
       display: flex;
       justify-content: center;
-      padding: 20px;           
+      padding: 20px;
   }
-  
+
   .form{
       background-color: rgb(0, 0, 0);
       padding: 0px ;
-      padding-right: 100px;       
-      text-align: center;  
+      padding-right: 100px;
+      text-align: center;
   }
   .flex-container{
       display: flex;
-      justify-content: center;       
-  }    
+      justify-content: center;
+  }
   .form-parrafo{
       font-size: 15px;
       text-align: left;
   }
   .flex-container{
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      margin: 0px ; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px ;
       width: 100%;
       height: 100%;
-      padding-top: 50px;        
-      padding-right: 30px;    
-  }  
+      padding-top: 50px;
+      padding-right: 30px;
+  }
 }
 @media screen and (max-width: 768px){
   .menu{

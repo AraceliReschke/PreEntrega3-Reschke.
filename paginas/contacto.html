@@ -28,41 +28,41 @@
         </label>        
         
         <ul>
-         <li class ="nav-item"><a href="../index.html">inicio </a></li>
-         <li class="nav-item"><a href="../paginas/sobre-mi.html">sobre mi</a></li>
-         <li class="nav-item "><a href="../paginas/galeria.html">galeria</a></li>
+         <li class ="nav-item"><a href="../index.html">Inicio </a></li>
+         <li class="nav-item"><a href="../paginas/sobre-mi.html">Sobre Mi</a></li>
+         <li class="nav-item "><a href="../paginas/galeria.html">Galeria</a></li>
         </ul>
       </nav>
       
     
-    <main class="contenedor">
+    <main >
       <section>
         <article>
-          
-          <div class="flex-container">
-            <form class="form">
-    
-              <p class="form-parrafo"> Si quieres puedes utilizar el siguente formulario.</p>
-              
-              <div class="form-section">
-                <input type="text" placeholder="Nombre" class="form-input">
+          <form class="formulario">
+            <fieldset>
+              <legend>Tus Datos</legend>
+              <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input class="input" id="nombre" type="tex" placeholder="Tu Nombre">
               </div>
-    
-              <div class="form-section">
-               <input type="text" placeholder="Apellido"class="form-input">
-              </div>                 
-              
-              <div class="form-section">            
-                <textarea class="form-input" name="4" cols="30">comentarios/sugerencias...</textarea >
+              <div class="campo">
+                <label for="Apellido">Nombre:</label>
+                <input class="input" id="Apellido" type="tex" placeholder="Tu Apellido">
               </div>
-              <div class="form-boton">
-                <input type="button" value="Enviar"class="form-input">
-              </div>  
-             
-            </form>
-          </div>                    
-                  
-             
+              <div class="campo">
+                <label for="Email">E-mail</label>
+                <input class="input" id="email" type="email" placeholder="Tu Email">
+              </div>
+              <div class="campo">
+                <label for="tel">Mensaje</label>
+                <textarea rows="20" cols="18">Hola</textarea>
+              </div>
+            </fieldset>
+
+            <input class="btn"  type="submit" value="Enviar">
+
+          </form>   
+
         </article>
       </section> 
     </main>
