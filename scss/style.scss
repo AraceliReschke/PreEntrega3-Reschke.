@@ -1,6 +1,9 @@
 body{
     background-color: rgb(0, 0, 0);
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 *{
     padding: 0;
     margin: 0;
@@ -12,18 +15,26 @@ body{
     font-family:"Melorist" ;
     src: url(../fuentes/Melorist.ttf);
 }
+/*variables*/
+$font1:50px;
+$font2:20px;
+$font3:30px;
+$font4:18px;
+$color1:white;
+$color2:black;
+
 a{
-    color: #fffefe;
+    color: $color2;
 
 &:hover {
     background-color: #ffffff;
-    color: #000000;
+    color: $color2;
 }
     
 }
 
 nav{
-    background: #030303;
+    background: $color2;
     height: 80px;
     width: 100%;
 
@@ -36,15 +47,15 @@ nav{
          line-height: 80px;
          margin: 0 5px;
         a{
-            color: #fffefe;
-            font-size: 18px;
+            color:$color1;
+            font-size: $font4;
             padding: 7px 13px;
             border-radius: 3px;
             text-transform: uppercase;
             text-decoration: none;
 
         &:hover{
-            background: #f9f8f8;
+            background: $color1;
             transition: .5s; 
             }  
         }
@@ -54,8 +65,8 @@ nav{
     }
 
 .menu{
-    font-size: 30px;
-    color: #f9f5f5;
+    font-size: $font1;
+    color:$color1;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -68,16 +79,16 @@ nav{
     display: none;
 }
 h1{
-    color: white;
-    font-size: 50px;
+    color:$color1;
+    font-size: $font1;
     font-family:"Melorist";
     align-items: flex-start;
     padding-left:30px ;
     padding-top: 20px;
 }
 h2{
-    color: white;
-    font-size: 30px;
+    color: $color1;
+    font-size: $font3;
     font-family:Louis George Cafe Light;
     padding-left: 100px;
 }
@@ -87,14 +98,11 @@ img.custom{
     width: 600px;
     object-fit: scale-down;
 }
-aside ul li {
-    display: flex;
-    display: inline-block; 
-    margin-right: 20px; 
-    padding-top: 10px;   
-
-
-}
+.info-redes{
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 30px;
+  }
 .info-redes{
     list-style: none;
     font-size: 30px;    
@@ -103,94 +111,114 @@ aside ul li {
     padding: 0;
     margin: 0;
     padding-top: 20px;
+    .redes{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
 }
 .derechos{
     display: flex;
     justify-content: center;    
     padding-top: 10px;
-    color: white;
+    color: $color1;
 }
 .sobre-mi{
-    display: flex;
-    justify-content:center;    
-    padding-top: 200px;
-    padding-left: 200px;  
-    
-    .content-info {
-        background-color: rgb(0, 0, 0);
-        font-family:Louis George Cafe; ;
-        color:white;
-        width: 1000px;
-        height: 700px;    
-        padding: 20px;
-        border: 0px solid;
-        position: sticky;
-        text-align: justify
-            
-    h3 {
-        font-size: 40px;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        }     
-    } 
-      
-}
-
-
-
-  
-
-.gallery-container{
-    display: grid;
-    grid-template-columns: repeat(7, 200px) ;
-    grid-template-rows: 120px repeat(2, 120px);
-    grid-gap: 30px;
-    padding-top: 150px;
-    padding-left: 150px;
-
-img{
-    border-radius: 5px;
-}    
-}
-.flex-container{
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    margin: 100px 100px;
-
-.form{
-    background-color: rgb(0, 0, 0);
-    margin: auto;
-    padding: 150px  ;
-    min-height: 400px;
-    text-align: center;
-    
-    .form-parrafo {
-        font-size: 20px;
-        text-align: center;
-        color: white;
-        padding-left: 50px
+    background-image: linear-gradient(to left, transparent 50%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%),
+  url(../fotos/fotoo44.jpg);
+  background-position: right center;
+  padding: 20px 0;
+  margin-top: 100px;
+  margin-bottom: 180px;
+  background-repeat: no-repeat;
+  background-size: 100%, 1900px;
+    .sobre-mi-grid{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);  
     }
-    .form-input{
-        width: 150%;
-        padding: 7px;
-        margin: 6px;
-        border-radius: 5px;
-        border-bottom: 3px solid rgb(96, 123, 245) ;
-    
-    .form textarea{
-        min-height: 200px;
-        resize: none;
-    } 
-    .form-boton{
-        padding: 10px;
-        padding-left: 40px;
-        width: 100%;
-    
-    
-}   }  
-    } 
+    .texto-sobre-mi{
+     grid-column: 2/1; 
+     color: $color1;
+     font-family:Louis George Cafe Light;
+     justify-content: center;  
+     padding: 0 30px ;
+    }
+    .texto-sobre-mi h3{
+     font-family:"Melorist";
+     color:$color1;
+    }
 }
+#galeria .col-lg-4 {
+    margin: 0;
+    padding: 25px;
+
+    #galeria img{
+        width: 100%;
+        height: 250px;
+    }
+
+    #galeria img:hover{
+        border: 5px solid $color1;
+      }
+}
+.formulario{
+    max-width: 600px;
+    margin:0 auto; 
+    .formulario fieldset{
+        font-family:Louis George Cafe Light;
+        border: 1px solid #ffffff;  
+        color:$color1;
+        padding-left: 5px ;
+        padding-right: 20px;
+    } 
+    .formulario legend{
+        background-color:$color2;
+        font-family:Louis George Cafe Light;
+        text-align: center;
+        width: 100%;
+        color:$color1;
+        font-weight: 900;
+        padding: 14px;
+        margin-bottom: 40px;
+    }
+    .campo{
+        display: flex;
+     margin-bottom: 32px;
+    }
+    .campo label{
+        flex-basis:100px ;
+    }
+    .campo input[type="tex"],
+    .campo input[type="email"],
+     textarea  {
+     flex: 1;
+     padding: 14px;
+     font-family:Louis George Cafe Light;
+   }
+    .btn{
+     background-color: $color1;  
+     color:$color2;
+     padding:10px;
+     margin-top: 4px;
+     font-weight: 900;
+     text-align: center;
+     transition:.3s ease-out ;
+     border: #ffffff;
+    
+    }
+    btn:hover{
+        cursor: pointer;
+    }
+    
+      
+  }
+
+
+
+
+
+
+
+
 
 @import "queries"
