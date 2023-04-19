@@ -12,60 +12,62 @@
   
 </head>
   <body>
-    <header>
-      <div> 
-        <h1>Reschke Araceli</h1>
-      </div>
-      <div>
-        <h2>Fotografia</h2> 
-      </div>
-    </header>  
+    <header>      
+        <div> 
+          <h1>Reschke Araceli</h1>
+        </div>
+        <div>
+          <h2>Fotografia</h2> 
+        </div>
+    </header>
       <nav>
-        <link rel="import href=menu.html">
+        
         <input type="checkbox" id="check">
         <label for="check" class="menu">
         <i class='bx bx-menu'></i>
-        </label>
-                
+        </label>        
+        
         <ul>
-         <li class ="nav-item"><a href="../index.html">inicio </a></li>
-         <li class="nav-item"><a href="../paginas/sobre-mi.html">sobre mi</a></li>
-         <li class="nav-item "><a href="../paginas/galeria.html">galeria</a></li>
+         <li class ="nav-item"><a href="../index.html">Inicio </a></li>
+         <li class="nav-item"><a href="../paginas/sobre-mi.html">Sobre Mi</a></li>
+         <li class="nav-item "><a href="../paginas/galeria.html">Galeria</a></li>
         </ul>
       </nav>
+      
     
-    <main>
+    <main >
       <section>
         <article>
-          <div class="flex-container">
-            <form class="form">
-    
-              <p class="form-parrafo"> Si quieres puedes utilizar el siguente formulario.</p>
-              
-              <div class="form-section">
-                <input type="text" placeholder="Nombre" class="form-input">
+          <form class="formulario">
+            <fieldset>
+              <legend>Tus Datos</legend>
+              <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input class="input" id="nombre" type="tex" placeholder="Tu Nombre">
               </div>
-    
-              <div class="form-section">
-               <input type="text" placeholder="Apellido"class="form-input">
-              </div>                 
-              
-              <div class="form-section">            
-                <textarea class="form-input" name="4" cols="30">comentarios/sugerencias...</textarea >
+              <div class="campo">
+                <label for="Apellido">Nombre:</label>
+                <input class="input" id="Apellido" type="tex" placeholder="Tu Apellido">
               </div>
-              <div class="form-boton">
-                <input type="button" value="Enviar"class="form-input">
-              </div>  
-             
-            </form>
-          </div>                    
-                  
-             
+              <div class="campo">
+                <label for="Email">E-mail</label>
+                <input class="input" id="email" type="email" placeholder="Tu Email">
+              </div>
+              <div class="campo">
+                <label for="tel">Mensaje</label>
+                <textarea rows="10" cols="18">Hola</textarea>
+              </div>
+            </fieldset>
+
+            <input class="btn"  type="submit" value="Enviar">
+
+          </form>   
+
         </article>
       </section> 
     </main>
-    <aside>
-      <ul class="info-redes">                   
+    <aside class="info-redes">
+      <ul class="redes">                   
         <li>
           <div >
            <a href="https://www.instagram.com/reschke.araceli/"><i class='bx bxl-instagram' ></i></a>
@@ -111,9 +113,3 @@
                           
                  
                    
-   
-    
-
-   
-          
- 
